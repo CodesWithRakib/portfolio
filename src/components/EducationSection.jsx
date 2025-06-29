@@ -14,13 +14,13 @@ const education = [
 const certifications = [
   {
     id: 1,
-    name: "Build Responsive Real-World Websites with HTML and CSS",
-    issuer: "Jonas Schmedtmann (Udemy)",
-    year: "2022",
+    name: "Complete Web Development Bootcamp - Batch 11",
+    issuer: "Programming Hero",
+    year: "2025",
   },
   {
     id: 2,
-    name: "The Complete JavaScript Course 2025: From Zero to Expert!",
+    name: "The Ultimate React Course 2025: React, Next.js, Redux & More",
     issuer: "Jonas Schmedtmann (Udemy)",
     year: "2023",
   },
@@ -32,27 +32,27 @@ const certifications = [
   },
   {
     id: 4,
-    name: "The Ultimate React Course 2025: React, Next.js, Redux & More",
-    issuer: "Jonas Schmedtmann (Udemy)",
-    year: "2025",
-  },
-  {
-    id: 5,
-    name: "Delta 6 Course",
-    issuer: "Apna College",
-    year: "2022",
-  },
-  {
-    id: 6,
     name: "Frontend Domination",
     issuer: "Sheryians Coding",
     year: "2024",
   },
   {
+    id: 5,
+    name: "The Complete JavaScript Course 2025: From Zero to Expert!",
+    issuer: "Jonas Schmedtmann (Udemy)",
+    year: "2023",
+  },
+  {
+    id: 6,
+    name: "Delta 6 Course",
+    issuer: "Apna College",
+    year: "2024",
+  },
+  {
     id: 7,
-    name: "Complete Web Development Bootcamp - Batch 11",
-    issuer: "Programming Hero",
-    year: "2025",
+    name: "Build Responsive Real-World Websites with HTML and CSS",
+    issuer: "Jonas Schmedtmann (Udemy)",
+    year: "2022",
   },
 ];
 

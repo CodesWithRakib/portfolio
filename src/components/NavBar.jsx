@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Sun, Moon, Github, Linkedin, FileText, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 
 const NavBar = () => {
   const [theme, setTheme] = useState(() => {
@@ -71,7 +72,7 @@ const NavBar = () => {
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo with animation */}
           <motion.a
-            href="#"
+            href="/"
             className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 hover:opacity-90 transition-opacity"
             aria-label="Home"
             whileHover={{ scale: 1.05 }}
@@ -122,7 +123,7 @@ const NavBar = () => {
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
-              <Github className="w-5 h-5" />
+              <FiGithub className="w-5 h-5" />
             </motion.a>
 
             <motion.a
@@ -134,7 +135,7 @@ const NavBar = () => {
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
-              <Linkedin className="w-5 h-5" />
+              <FiLinkedin className="w-5 h-5" />
             </motion.a>
 
             <motion.a
@@ -220,7 +221,7 @@ const NavBar = () => {
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.9 }}
                   >
-                    <Github className="w-6 h-6" />
+                    <FiGithub className="w-6 h-6" />
                   </motion.a>
 
                   <motion.a
@@ -232,7 +233,7 @@ const NavBar = () => {
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.9 }}
                   >
-                    <Linkedin className="w-6 h-6" />
+                    <FiLinkedin className="w-6 h-6" />
                   </motion.a>
                 </motion.div>
 
