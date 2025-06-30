@@ -1,6 +1,12 @@
 import React from "react";
-import { FiGithub, FiExternalLink, FiCode, FiServer } from "react-icons/fi";
-
+import {
+  FiGithub,
+  FiExternalLink,
+  FiCode,
+  FiServer,
+  FiInfo,
+} from "react-icons/fi";
+import { useNavigate } from "react-router";
 const projects = [
   {
     id: 1,
@@ -99,6 +105,12 @@ const projects = [
 ];
 
 const ProjectsSection = () => {
+  const navigate = useNavigate();
+
+  const handleDetailsClick = (projectId) => {
+    navigate(`/projects/${projectId}`);
+  };
+
   return (
     <section
       id="projects"
@@ -204,6 +216,13 @@ const ProjectsSection = () => {
 
                   {/* Links */}
                   <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                    <button
+                      onClick={() => handleDetailsClick(project.id)}
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gray-200 dark:bg-gray-600 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-indigo-600 dark:hover:bg-indigo-400 hover:text-white transition-colors duration-200 text-sm sm:text-base"
+                    >
+                      <FiInfo className="w-4 h-4" />
+                      <span>Details</span>
+                    </button>
                     <a
                       href={project.githubClient}
                       target="_blank"
