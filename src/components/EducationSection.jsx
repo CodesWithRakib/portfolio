@@ -64,7 +64,11 @@ const EducationSection = () => {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div
+          className="text-center mb-16"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
             Education &{" "}
             <span className="text-indigo-600 dark:text-indigo-400">
@@ -80,9 +84,9 @@ const EducationSection = () => {
         {/* Grid */}
         <div className="grid md:grid-cols-2 gap-12">
           {/* Education Block */}
-          <div>
+          <div data-aos="fade-right" data-aos-duration="700">
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6 flex items-center gap-2">
-              <FiBook className="text-indigo-600 dark:text-indigo-400" />{" "}
+              <FiBook className="text-indigo-600 dark:text-indigo-400" />
               Education
             </h3>
             <div className="space-y-6">
@@ -90,6 +94,8 @@ const EducationSection = () => {
                 <div
                   key={edu.id}
                   className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6 rounded-xl shadow hover:shadow-md transition-all duration-200"
+                  data-aos="zoom-in"
+                  data-aos-delay="100"
                 >
                   <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
                     {edu.degree}
@@ -109,16 +115,18 @@ const EducationSection = () => {
           </div>
 
           {/* Certifications Block */}
-          <div>
+          <div data-aos="fade-left" data-aos-duration="700">
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6 flex items-center gap-2">
-              <FiAward className="text-indigo-600 dark:text-indigo-400" />{" "}
+              <FiAward className="text-indigo-600 dark:text-indigo-400" />
               Certifications
             </h3>
             <div className="space-y-6">
-              {certifications.map((cert) => (
+              {certifications.map((cert, index) => (
                 <div
                   key={cert.id}
                   className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6 rounded-xl hover:shadow-md transition-all duration-200"
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 100}
                 >
                   <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
                     {cert.name}

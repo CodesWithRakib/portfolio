@@ -88,15 +88,22 @@ const SkillsSection = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Tech Stack Marquee */}
-        <div className="mb-16">
+        <div className="mb-16" data-aos="fade-up" data-aos-duration="1000">
           <Marquee speed={40} pauseOnHover gradient={false}>
             {techLogos.map((logo, i) => (
-              <div key={i} className="mx-6 flex flex-col items-center">
+              <div
+                key={i}
+                className="mx-6 flex flex-col items-center"
+                data-aos="zoom-in"
+                data-aos-delay={i * 100}
+                data-aos-duration="600"
+              >
                 <a
                   href={logo.resource}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all"
+                  title={logo.name}
                 >
                   <img
                     src={logo.src}
@@ -110,7 +117,11 @@ const SkillsSection = () => {
         </div>
 
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div
+          className="text-center mb-16"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Technical{" "}
             <span className="text-indigo-600 dark:text-indigo-400">
@@ -129,6 +140,9 @@ const SkillsSection = () => {
             <div
               key={index}
               className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-200 dark:border-gray-700"
+              data-aos="fade-up"
+              data-aos-delay={index * 150}
+              data-aos-duration="800"
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 rounded-lg bg-indigo-100 dark:bg-indigo-900/50">

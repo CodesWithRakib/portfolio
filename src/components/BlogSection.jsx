@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { FiCalendar, FiClock, FiArrowRight, FiX } from "react-icons/fi";
 
@@ -40,7 +41,7 @@ const articles = [
   },
 ];
 
-// Modal component for article details
+
 const Modal = ({ isOpen, onClose, article }) => {
   if (!isOpen || !article) return null;
 
@@ -56,6 +57,8 @@ const Modal = ({ isOpen, onClose, article }) => {
       <div
         className="bg-white dark:bg-gray-900 rounded-lg max-w-3xl w-full max-h-[80vh] overflow-y-auto p-6 relative shadow-lg"
         onClick={(e) => e.stopPropagation()}
+        data-aos="zoom-in"
+        data-aos-duration="500"
       >
         <button
           onClick={onClose}
@@ -118,7 +121,11 @@ const BlogSection = () => {
     <section id="blog" className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div
+          className="text-center mb-16"
+          data-aos="fade-up"
+          data-aos-duration="700"
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Latest{" "}
             <span className="text-indigo-600 dark:text-indigo-400">
@@ -133,9 +140,12 @@ const BlogSection = () => {
 
         {/* Articles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {articles.map((article) => (
+          {articles.map((article, index) => (
             <article
               key={article.id}
+              data-aos="fade-up"
+              data-aos-delay={index * 150}
+              data-aos-duration="600"
               className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
             >
               {/* Image */}
@@ -197,7 +207,11 @@ const BlogSection = () => {
         </div>
 
         {/* View All Button */}
-        <div className="text-center mt-16">
+        <div
+          className="text-center mt-16"
+          data-aos="fade-up"
+          data-aos-duration="600"
+        >
           <a
             href="#"
             className="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition-colors duration-200"

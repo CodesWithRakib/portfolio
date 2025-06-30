@@ -83,7 +83,11 @@ const TestimonialsSection = () => {
     <section id="testimonials" className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div
+          className="text-center mb-16"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
             Client{" "}
             <span className="text-indigo-600 dark:text-indigo-400">
@@ -99,8 +103,14 @@ const TestimonialsSection = () => {
         {/* Carousel */}
         <div className="relative">
           <Slider {...settings} className="pb-12">
-            {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="px-3 md:px-4">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={testimonial.id}
+                className="px-3 md:px-4"
+                data-aos="zoom-in"
+                data-aos-delay={index * 100}
+                data-aos-duration="700"
+              >
                 <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6 rounded-xl h-full flex flex-col justify-between shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out">
                   {/* Avatar & Info */}
                   <div className="flex items-center gap-4 mb-4">

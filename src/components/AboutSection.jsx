@@ -62,7 +62,8 @@ const AboutSection = () => {
       className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        {/* Section Header */}
+        <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             About{" "}
             <span className="text-indigo-600 dark:text-indigo-400">Me</span>
@@ -76,7 +77,10 @@ const AboutSection = () => {
 
         <div className="space-y-16">
           {/* Personal Intro */}
-          <div className="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-indigo-900/10 dark:to-blue-900/10 p-8 rounded-xl border border-indigo-100 dark:border-indigo-800/50 shadow-sm hover:shadow-md transition-shadow">
+          <div
+            className="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-indigo-900/10 dark:to-blue-900/10 p-8 rounded-xl border border-indigo-100 dark:border-indigo-800/50 shadow-sm hover:shadow-md transition-shadow"
+            data-aos="fade-up"
+          >
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
               Hello, I'm Md. Rakib Islam - Developer & Creative Problem Solver
             </h3>
@@ -84,126 +88,91 @@ const AboutSection = () => {
               <p>
                 My coding journey started in 2021 when I first discovered the
                 "100 Days of Python" course on Udemy. Although I couldn't
-                complete it at the time, it planted a seed of curiosity. I later
-                explored courses by Jonas Schmedtmann, Apna College, Sheryians
-                Coding School, Code with Harry, and many others across YouTube
-                and online platforms — but I often struggled to stay focused or
-                finish them.
+                complete it at the time, it planted a seed of curiosity...
               </p>
-
               <p>
                 Everything changed when I enrolled in the Programming Hero
-                course. It gave me the structured path and motivation I was
-                missing. Since then, I’ve been able to revisit and truly
-                understand the concepts I once struggled with — from Jonas's
-                deep frontend insights to Apna College’s practical JavaScript
-                tutorials and beyond.
+                course...
               </p>
-
               <p>
                 I thrive on{" "}
                 <span className="font-medium text-indigo-600 dark:text-indigo-400">
                   creating elegant solutions to complex problems
                 </span>
-                . There’s nothing more satisfying than that “aha!” moment after
-                hours of debugging. My favorite work lies in building
-                applications that are not only functional and efficient but also
-                offer a seamless and enjoyable user experience.
+                ...
               </p>
-
               <p>When I’m not immersed in code, you'll find me:</p>
-
               <ul className="space-y-2 pl-5 list-disc">
                 <li className="flex items-start gap-2">
-                  <Mountain className="w-5 h-5 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
+                  <Mountain className="w-5 h-5 text-indigo-600 dark:text-indigo-400 mt-0.5" />
                   <span>
-                    A passionate gamer — love playing games like{" "}
-                    <strong>Clash of Clans</strong> and{" "}
-                    <strong>Free Fire</strong> to unwind and recharge
+                    A passionate gamer — love playing Clash of Clans & Free Fire
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Music className="w-5 h-5 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
-                  <span>
-                    Enjoy discovering and listening to music, especially during
-                    late-night coding or chill moments
-                  </span>
+                  <Music className="w-5 h-5 text-indigo-600 dark:text-indigo-400 mt-0.5" />
+                  <span>Listening to music during coding and relaxation</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Coffee className="w-5 h-5 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
-                  <span>
-                    Obsessed with building cool things with code — turning ideas
-                    into digital reality is my kind of fun
-                  </span>
+                  <Coffee className="w-5 h-5 text-indigo-600 dark:text-indigo-400 mt-0.5" />
+                  <span>Building cool things — turning ideas into apps</span>
                 </li>
               </ul>
-
               <p>
                 I approach both coding and life with{" "}
                 <span className="font-medium">curiosity and perseverance</span>.
-                Whether it's learning a new framework or mastering a new hiking
-                trail, I believe growth happens outside our comfort zones.
-                Currently excited about [current tech interest] and planning my
-                next adventure to [upcoming trip].
+                Currently excited about [tech] and planning [trip].
               </p>
             </div>
           </div>
 
           {/* Education */}
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+          <div
+            className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-6 flex items-center gap-2">
               <BookOpen className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
               Education & Journey
             </h4>
             <div className="space-y-6">
+              {/* Each Timeline Entry */}
               <div className="relative pl-8 before:absolute before:left-0 before:top-2 before:h-4 before:w-4 before:rounded-full before:bg-indigo-500 before:ring-4 before:ring-indigo-200 dark:before:ring-indigo-900/30">
                 <h5 className="text-lg font-medium text-gray-800 dark:text-gray-100">
-                  Higher Secondary Certificate (HSC) - Science
+                  HSC - Science | Hossenpur Degree College (2021–2024)
                 </h5>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                  Hossenpur Degree College • 2021-2024
-                </p>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  Built a strong foundation in logical thinking and analysis,
-                  which later helped me in problem-solving as a developer.
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Foundation in logical thinking & analysis
                 </p>
               </div>
 
               <div className="relative pl-8 before:absolute before:left-0 before:top-2 before:h-4 before:w-4 before:rounded-full before:bg-indigo-500 before:ring-4 before:ring-indigo-200 dark:before:ring-indigo-900/30">
                 <h5 className="text-lg font-medium text-gray-800 dark:text-gray-100">
-                  Early Exploration & Learning Phase
+                  Early Exploration (Self-Taught)
                 </h5>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                  2021–present • Self-Taught
-                </p>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  Tried various courses like "100 Days of Python" (Udemy),
-                  Jonas’s Advanced JavaScript & React, Apna College, Sheryians,
-                  Code with Harry, and many others. Despite struggling with
-                  consistency, this phase exposed me to diverse teaching styles
-                  and helped me discover my passion for web development.
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Learned from YouTube courses (Jonas, Apna College, Harry...)
                 </p>
               </div>
 
               <div className="relative pl-8 before:absolute before:left-0 before:top-2 before:h-4 before:w-4 before:rounded-full before:bg-indigo-500 before:ring-4 before:ring-indigo-200 dark:before:ring-indigo-900/30">
                 <h5 className="text-lg font-medium text-gray-800 dark:text-gray-100">
-                  Programming Hero Web Development Course
+                  Programming Hero Course (2024–Present)
                 </h5>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                  Online Certification • 2024–Present
-                </p>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  Gained a structured path and clarity in full-stack development
-                  (MERN). Now revisiting earlier courses with confidence while
-                  building real-world projects and contributing to collaborative
-                  environments.
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Full-stack MERN focused training and real projects
                 </p>
               </div>
             </div>
           </div>
 
           {/* Skills */}
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+          <div
+            className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-6">
               What I Bring to the Table
             </h4>
@@ -212,6 +181,8 @@ const AboutSection = () => {
                 <div
                   key={index}
                   className="group p-5 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-indigo-300 dark:hover:border-indigo-500 transition-colors duration-300 hover:shadow-md"
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 100}
                 >
                   <div className="flex items-start gap-4 mb-4">
                     <div className="p-3 bg-indigo-100 dark:bg-indigo-900/50 rounded-lg group-hover:bg-indigo-200 dark:group-hover:bg-indigo-800/50 transition-colors">

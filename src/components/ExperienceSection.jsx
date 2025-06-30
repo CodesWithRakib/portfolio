@@ -48,7 +48,11 @@ const ExperienceSection = () => {
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div
+          className="text-center mb-16"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
             My{" "}
             <span className="text-indigo-600 dark:text-indigo-400">
@@ -64,8 +68,14 @@ const ExperienceSection = () => {
 
         {/* Timeline */}
         <div className="relative border-l border-gray-300 dark:border-gray-700 pl-6">
-          {experiences.map((exp) => (
-            <div key={exp.id} className="mb-12 relative group">
+          {experiences.map((exp, index) => (
+            <div
+              key={exp.id}
+              className="mb-12 relative group"
+              data-aos="fade-right"
+              data-aos-delay={index * 200}
+              data-aos-duration="700"
+            >
               {/* Dot */}
               <span className="absolute left-[-0.75rem] top-2 w-4 h-4 bg-indigo-600 dark:bg-indigo-400 rounded-full border-2 border-white dark:border-gray-900 z-10 shadow" />
 

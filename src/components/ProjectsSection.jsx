@@ -61,6 +61,41 @@ const projects = [
     liveLink: "https://green-nest-plant-care-tracker.web.app/",
     category: "fullstack",
   },
+  {
+    id: 3,
+    title: "CareerHub - Freelance & Job Marketplace",
+    description:
+      "A modern freelance and job marketplace inspired by Fiverr and Upwork. Employers can post jobs, and freelancers can offer services with full authentication, search, filtering, and responsive UI.",
+    features: [
+      "Firebase Authentication (Email/Password, Google login)",
+      "Modern landing page with animated banner",
+      "Search and Filter functionalities",
+      "Profile creation and role-based access (Employer / Freelancer)",
+      "Job and service listings",
+      "Contact form with EmailJS",
+      "Toast notifications",
+      "Animations using AOS and GSAP",
+      "Dark/Light theme toggle",
+      "Fully responsive UI with Tailwind CSS",
+    ],
+    technologies: [
+      "React 19",
+      "Tailwind CSS v4",
+      "Firebase",
+      "React Router v7",
+      "AOS",
+      "GSAP",
+      "React Toastify",
+      "React Slick",
+      "Slick Carousel",
+      "EmailJS",
+    ],
+    image: "https://i.ibb.co/MxyXQL9J/careerhub-front.png",
+    githubClient: "https://github.com/CodesWithRakib/careerhub-client-side",
+    githubServer: "https://github.com/CodesWithRakib/careerhub-client-side",
+    liveLink: "https://careerhub-codeswithrakib.netlify.app/",
+    category: "fullstack",
+  },
 ];
 
 const ProjectsSection = () => {
@@ -71,7 +106,11 @@ const ProjectsSection = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12 md:mb-16">
+        <div
+          className="text-center mb-12 md:mb-16"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Featured{" "}
             <span className="text-indigo-600 dark:text-indigo-400">
@@ -87,12 +126,15 @@ const ProjectsSection = () => {
 
         {/* Projects Grid */}
         <div className="grid gap-8 md:gap-12">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <div
               key={project.id}
+              data-aos="zoom-in-up"
+              data-aos-duration="800"
+              data-aos-delay={index * 200}
               className="group flex flex-col lg:flex-row bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700"
             >
-              {/* Image - Now properly responsive */}
+              {/* Image */}
               <div className="lg:w-1/2 w-full h-64 sm:h-80 md:h-96 lg:h-auto relative overflow-hidden">
                 <div className="absolute inset-0 w-full h-full flex items-center justify-center bg-gray-100 dark:bg-gray-700">
                   <img
@@ -112,7 +154,6 @@ const ProjectsSection = () => {
 
               {/* Content */}
               <div className="lg:w-1/2 p-5 sm:p-6 md:p-8 flex flex-col">
-                {/* Category */}
                 <div className="mb-3 sm:mb-4 flex items-center gap-2 text-sm font-medium text-indigo-600 dark:text-indigo-400">
                   <FiCode className="w-4 h-4" />
                   <FiServer className="w-4 h-4" />
@@ -161,33 +202,33 @@ const ProjectsSection = () => {
                     ))}
                   </div>
 
-                  {/* Links - Improved mobile responsiveness */}
+                  {/* Links */}
                   <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                     <a
                       href={project.githubClient}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-indigo-600 dark:hover:bg-indigo-400 hover:text-white transition-colors duration-200 text-sm sm:text-base"
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-indigo-600 dark:hover:bg-indigo-400 hover:text-white transition-colors duration-200 text-sm sm:text-base"
                     >
-                      <FiGithub className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <FiGithub className="w-4 h-4" />
                       <span>Client Code</span>
                     </a>
                     <a
                       href={project.githubServer}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-indigo-600 dark:hover:bg-indigo-400 hover:text-white transition-colors duration-200 text-sm sm:text-base"
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-indigo-600 dark:hover:bg-indigo-400 hover:text-white transition-colors duration-200 text-sm sm:text-base"
                     >
-                      <FiGithub className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <FiGithub className="w-4 h-4" />
                       <span>Server Code</span>
                     </a>
                     <a
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 bg-indigo-600 dark:bg-indigo-400 text-white dark:text-gray-900 rounded-lg hover:bg-indigo-700 dark:hover:bg-indigo-500 transition-colors duration-200 text-sm sm:text-base"
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-indigo-600 dark:bg-indigo-400 text-white dark:text-gray-900 rounded-lg hover:bg-indigo-700 dark:hover:bg-indigo-500 transition-colors duration-200 text-sm sm:text-base"
                     >
-                      <FiExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <FiExternalLink className="w-4 h-4" />
                       <span>Live Demo</span>
                     </a>
                   </div>
